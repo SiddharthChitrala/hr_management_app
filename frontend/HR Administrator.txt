@@ -1,0 +1,58 @@
+**HR Administrator:**
+1. **Employee Management:**
+   - View a list of all employees and their details (e.g., contact information, job title, department).
+   - Add, edit, and update employee records.
+   - Handle employee terminations and record exit interviews.
+
+2. **Recruitment and Onboarding:**
+   - Post new job openings with details and qualifications required.
+   - Receive and review job applications from external users (job seekers).
+   - Schedule and conduct interviews for shortlisted candidates.
+   - Communicate with job seekers regarding the status of their applications.
+
+
+3. **Payroll Management:**
+   - Calculate salaries, deductions, bonuses, and overtime pay for employees.
+   - Manage payroll processing and ensure timely payments.
+   - Generate and distribute payslips to employees.
+
+
+4. **Training and Development:**
+   - Identify training needs and plan employee development programs.
+   - Approve training requests and track employee training progress.
+   - Manage training resources and course catalogs.
+
+5. **Attendance and Time Tracking:**
+   - Monitor employee attendance and approve time-off requests.
+   - Handle attendance records and manage leave balances.
+   - Track employee working hours and overtime.
+
+
+
+**External User (Job Seeker):**
+1. **View Job Openings:**
+   - Access a list of available job openings along with their descriptions and requirements.
+   - Filter job listings based on location, department, or job title.
+
+2. **Submit Job Applications:**
+   - Apply for specific job openings by submitting their resume and cover letter.
+   - Receive a confirmation notification after applying.
+
+3. **Check Application Status:**
+   - View the status of submitted job applications (e.g., pending, shortlisted, rejected).
+
+
+**Employee (Internal User):**
+1. **Attendance and Time Tracking:**
+   - Clock in and out of work (if applicable).
+   - Submit time-off requests for vacations, sick leave, etc.
+   - View their attendance records and leave balances.
+
+2. **View Payroll Details:**
+   - Access and download their payslips and tax-related documents.
+   - View salary details, deductions, and bonuses.
+
+
+3. **Request Meetings:**
+   - Schedule and request meetings with HR administrators or managers.
+   - Receive meeting confirmations and reminders.
