@@ -1,0 +1,263 @@
+#section1 {
+     height: 100vh;
+}
+
+#img {
+     margin-top: 50px;
+     height: 85vh;
+     padding: 20px;
+}
+
+.p1 {
+     margin-top: 20vh;
+     padding-right: 120px;
+}
+
+.p2 {
+     font-size: smaller;
+     font-weight: 100;
+}
+
+#section2 {
+     height: 50vh;
+}
+
+.scroll-container {
+     overflow-x: auto;
+     scrollbar-width: none;
+     -ms-overflow-style: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+     display: none;
+}
+
+.row {
+     display: flex;
+     flex-wrap: nowrap;
+}
+
+.card {
+     margin-left: 20px;
+     margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+     .scroll-container {
+          flex-wrap: nowrap;
+          overflow-x: scroll;
+     }
+     .card {
+          flex: 0 0 auto;
+          width: 200px;
+     }
+}
+
+#section3 {
+     margin-top: 5vh;
+     height: 80vh;
+}
+
+.rounded-curve {
+     border-radius: 20px;
+     overflow: hidden;
+     position: relative;
+
+}
+
+.cut-curve {
+     position: absolute;
+     top: -15px;
+     right: -15px;
+     border-radius: 50%;
+     background-color: #868686;
+     width: 50px;
+     height: 50px;
+     padding: 20px;
+}
+
+.bg-blue {
+     background-color: #007bff;
+     /* Customize the background color for this class */
+}
+
+.bg-green {
+     background-color: #28a745;
+     /* Customize the background color for this class */
+}
+
+.bg-red {
+     background-color: #dc3545;
+     /* Customize the background color for this class */
+}
+
+.bg-yellow {
+     background-color: #ffc107;
+     /* Customize the background color for this class */
+}
+
+.icon-container {
+     display: flex;
+     justify-content: center;
+}
+
+#img1 {
+     margin-top: 10px;
+     height: 85vh;
+     padding: 20px;
+}
+
+.p3 {
+     margin-top: 6vh;
+     font-weight: 600;
+}
+
+.card-icon {
+     padding-top: 10px;
+     padding-left: 20px;
+}
+
+.footer {
+     margin-top: 10vh;
+     background-color: #f2f2f2;
+     padding: 20px;
+     text-align: center;
+}
+
+.footer p {
+     margin: 0;
+     padding: 5px;
+}
+
+.footer h3 {
+     margin-bottom: 10px;
+}
+
+.company-details,
+.contact-details {
+     display: inline-block;
+     width: 45%;
+     text-align: left;
+     vertical-align: top;
+}
+
+.contact-details {
+     border-left: 1px solid #ccc;
+     padding-left: 20px;
+}
+
+.footer p strong {
+     font-weight: bold;
+}
+
+
+.container1 {
+     overflow: hidden;
+     width: 100%;
+}
+
+.rows {
+     display: flex;
+     transition: transform 1s;
+}
+
+.cols {
+     flex: 0 0 100%;
+     padding: 0 15px;
+}
+
+/* Additional styles for slider effect */
+@keyframes slide-left {
+     0% {
+          transform: translateX(0);
+     }
+
+     100% {
+          transform: translateX(-100%);
+     }
+}
+
+@keyframes slide-right {
+     0% {
+          transform: translateX(0);
+     }
+
+     100% {
+          transform: translateX(100%);
+     }
+}
+
+.slider-left {
+     animation: slide-left 10s infinite;
+}
+
+.slider-right {
+     animation: slide-right 10s infinite;
+}
+
+/* Container styles */
+.container1 {
+     overflow: hidden;
+     width: 100%;
+     max-width: 600px;
+     /* Set a maximum width for better readability */
+     margin: 0 auto;
+     /* Center the container */
+     background-color: #f9f9f9;
+     /* Light gray background */
+     border-radius: 10px;
+     /* Rounded corners */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     /* Subtle box shadow */
+     padding: 20px;
+}
+
+/* Slider styles */
+.rows {
+     display: flex;
+     transition: transform 1s;
+     overflow: hidden;
+     /* Hide overflowing content within the slider */
+}
+
+.cols {
+     flex: 0 0 100%;
+     padding: 20px;
+     background-color: #fff;
+     /* White background for each slide */
+     border-radius: 10px;
+     /* Rounded corners for each slide */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     /* Subtle box shadow for each slide */
+     margin-right: 20px;
+     /* Space between slides */
+}
+
+/* Slider animation */
+@keyframes slide-left {
+     0% {
+          transform: translateX(0);
+     }
+
+     100% {
+          transform: translateX(-100%);
+     }
+}
+
+@keyframes slide-right {
+     0% {
+          transform: translateX(0);
+     }
+
+     100% {
+          transform: translateX(100%);
+     }
+}
+
+.slider-left {
+     animation: slide-left 10s infinite;
+}
+
+.slider-right {
+     animation: slide-right 10s infinite;
+}

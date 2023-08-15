@@ -1,0 +1,28 @@
+#section1 {
+     background-image: url('../../../assets/img/bg.jpg');
+     height: 91vh;
+     width: auto;
+     padding-top: 5%;
+     color: #fff !important;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.row{
+     margin-top: -6vh;
+     margin-left: 50vh;
+     height: 75vh ;
+     width: 75vh;
+}
+.glassmorphism-form {
+     background-color: rgba(255, 255, 255, 0.15);
+     border-radius: 50vh !important;
+     backdrop-filter: blur(10px);
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     transition: background-color 0.3s ease;
+     padding: 60px !important;
+}
+
+.glassmorphism-form:hover {
+     background-color: rgba(255, 255, 255, 0.2);
+}
