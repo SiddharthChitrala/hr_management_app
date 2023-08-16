@@ -1,9 +1,11 @@
+// job-application.component.ts
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-job-application',
-  templateUrl: './job-application.component.html', // Update this path accordingly
-  styleUrls: ['./job-application.component.css'] // Update this path accordingly
+  templateUrl: './job-application.component.html',
+  styleUrls: ['./job-application.component.css']
 })
 export class JobApplicationComponent {
   full_name: string = '';
@@ -17,6 +19,8 @@ export class JobApplicationComponent {
   experience: string = '';
   cover_letter: string = '';
   status: string = 'Pending';
+
+  constructor(private http: HttpClient) {}
 
   goBack() {
     window.location.reload();
@@ -37,8 +41,13 @@ export class JobApplicationComponent {
       status: this.status
     };
   
-    console.log('Submitting form');
-    console.log('Form Data:', formData);
+    this.http.post<any>('http://localhost:9000/create/job', formData).subscribe(
+      (response) => {
+        console.log('Application submitted successfully:', response.message);
+      },
+      (error) => {
+        console.error('Error submitting application:', error);
+      }
+    );
   }
-  
 }

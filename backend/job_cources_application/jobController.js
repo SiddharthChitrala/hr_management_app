@@ -24,8 +24,35 @@ var createJobDataControllerFn = async (req, res) => {
     }
 };
 
+var updateJobDataControllerFn = async (req, res) => {
+    console.log(req.params.id);
+    console.log(req.body);
+    var result = await useJobService.updateJobDBService(req.params.id, req.body);
+    if (result) {
+        res.send({ 'status': true, "message": "Job Status updated" })
+    }
+    else {
+        res.send({ "status": false, "message": "Job Status Pending" })
+    }
+}
+
+var deleteJobDataControllerFn=async(req,res)=>{
+    console.log(req.params.id);
+   
+    var result=await useJobService.deleteJobDBService(req.params.id);
+    if(result){
+        res.send({"status":true,"message":"Rejected"})
+    }
+    else{
+        res.send({"status":false,"message":"Not Rejected"})
+    }
+    console.log('done')
+}
+
 module.exports = {
 
     getJobDataControllerFn,
-    createJobDataControllerFn
+    createJobDataControllerFn,
+    updateJobDataControllerFn,
+    deleteJobDataControllerFn
 };

@@ -1,10 +1,10 @@
 const express = require('express');
 
 
-const empController = require('../src/app/employee-auth/empController');
-const userController = require('../src/app/user-auth/userController');
-const hrController = require('../src/app/hr-admin-Auth/hrController');
-const jobDataController = require('../src/app/job_cources_application/jobController');
+const empController = require('../employee-auth/empController');
+const userController = require('../user-auth/userController');
+const hrController = require('../hr-admin-Auth/hrController');
+const jobDataController = require('../job_cources_application/jobController');
 
 const router = express.Router();
 
@@ -18,5 +18,7 @@ router.post('/hr/register', hrController.createHrControllerFn);
 
 router.get('/get/job', jobDataController.getJobDataControllerFn);
 router.post('/create/job', jobDataController.createJobDataControllerFn);
+router.patch('/update/job/:id',jobDataController.updateJobDataControllerFn);
+router.delete('/remove/job/:id',jobDataController.deleteJobDataControllerFn);
 
 module.exports = router;

@@ -16,6 +16,7 @@ import { AdminWelcomeComponent } from './hr-admin/admin-welcome/admin-welcome.co
 import { UserAuthComponent } from './external-user/user-auth/user-auth.component';
 import { UserWelcomeComponent } from './external-user/user-welcome/user-welcome.component';
 import { EmployeeWelcomeComponent } from './employee/employee-welcome/employee-welcome.component';
+import { RoomComponent } from './employee/room/room.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'admin-auth', component: AdminAuthComponent },
@@ -32,7 +33,12 @@ const routes: Routes = [
   { path: 'admin-welcome', component: AdminWelcomeComponent },
   { path: 'user-auth', component: UserAuthComponent },
   { path: 'user-welcome', component: UserWelcomeComponent },
-  { path: 'employee-welcome', component: EmployeeWelcomeComponent}
+  { path: 'employee-welcome', component: EmployeeWelcomeComponent },
+  // { path: 'employee-welcome/:roomId', component: EmployeeWelcomeComponent },
+  { path: 'Room', component: RoomComponent },
+  { path: 'Room/:roomId', component: RoomComponent }
+
+
 ];
 
 @NgModule({

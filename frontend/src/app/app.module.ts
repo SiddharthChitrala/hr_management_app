@@ -22,6 +22,8 @@ import { AdminWelcomeComponent } from './hr-admin/admin-welcome/admin-welcome.co
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { EmployeeWelcomeComponent } from './employee/employee-welcome/employee-welcome.component';
 import { UserWelcomeComponent } from './external-user/user-welcome/user-welcome.component';
+import { SocketIoModule } from 'ngx-socket-io';
+import { RoomComponent } from './employee/room/room.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { UserWelcomeComponent } from './external-user/user-welcome/user-welcome.
     HomeComponent,
     AdminWelcomeComponent,
     EmployeeWelcomeComponent,
-    UserWelcomeComponent
+    UserWelcomeComponent,
+    RoomComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,10 @@ import { UserWelcomeComponent } from './external-user/user-welcome/user-welcome.
     ReactiveFormsModule, // Include ReactiveFormsModule for reactive forms
     HttpClientModule, // Include HttpClientModule for making HTTP requests
     AppRoutingModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    SocketIoModule.forRoot({
+      url:"/"
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

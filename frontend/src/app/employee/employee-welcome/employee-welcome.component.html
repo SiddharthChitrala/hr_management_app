@@ -53,6 +53,17 @@
                              <span class="title">Request Meetings</span>
                          </a>
                      </li>
+                     <li class="list" [ngClass]="{'active': activeIndex === 3}" (click)="setActiveIndex(3)">
+                        <a class="icon-link" (click)="navigateTo('Room')">
+                          <span class="icon" data-tooltip="Room">
+                            <!-- Icon for Room -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-closed" viewBox="0 0 16 16">
+                              <path d="M1 0a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H.5a.5.5 0 0 1-.5-.5V1a1 1 0 0 1 1-1h.5zm1 1v14h13V1H2zm7 2a1 1 0 0 0-1 1v1H5v8h6V5H8V4a1 1 0 0 0-1-1zm1 8h2v2H9v-2z"/>
+                            </svg>
+                          </span>
+                          <span class="title">Room</span>
+                        </a>
+                      </li>
                  </ul>
              </div>
          </div>
