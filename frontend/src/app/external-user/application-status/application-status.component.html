@@ -1,4 +1,4 @@
-<button class="btn btn-secondary mb-3" (click)="goBack()">Back</button>
+<button class="btn btn-secondary mb-3 mt-4" (click)="goBack()">Back</button>
 <p class="fs-2">Your Job Status</p>
 
 <div class="container">
@@ -6,6 +6,7 @@
         <div class="card-header">{{UserItem.position}}</div>
         <div class="card-body">
           <h5 class="card-title">{{UserItem.full_name}}</h5>
+          <p class="card-text">{{UserItem.job_type}} Job</p>
           <p class="card-text">{{UserItem.status}}</p>
         </div>
       </div>
