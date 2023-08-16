@@ -1,1 +1,27 @@
-<p>attendance-time-tracking works!</p>
+<button class="btn btn-secondary mt-3" (click)="goBack()">Back</button>
+<div class="row justify-content-start">
+    <div class="col-md-6">
+        <div class="attendance-form mt-4">
+            <h2 class="mb-4">Add Attendance</h2>
+            <form (ngSubmit)="submitAttendance()">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" formControlName="name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" formControlName="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date:</label>
+                    <input type="date" id="date" formControlName="date" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="time" class="form-label">Time:</label>
+                    <input type="time" id="time" formControlName="time" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
