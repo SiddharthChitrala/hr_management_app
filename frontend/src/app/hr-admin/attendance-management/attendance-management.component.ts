@@ -10,14 +10,23 @@ export class AttendanceManagementComponent {
   goBack() {
     location.reload();
   }
-  Details: any[] = [];
   constructor(private http: HttpClient) {
     this.getAllDetails();
   }
+
+  Details: any[] = [];
+  filteredDetails: any[] = [];
+  searchTerm: string = '';
+
   getAllDetails() {
     this.http.get("http://localhost:9000/get").subscribe((resultData: any) => {
       console.log(resultData);
-      this.Details = resultData.data;
+      this.filteredDetails = resultData.data;
     })
+  }
+  searchAttendance() {
+    this.filteredDetails = this.Details.filter(attendance => {
+      return attendance.Name.toLowerCase().includes(this.searchTerm.toLowerCase());
+    });
   }
 }

@@ -1,13 +1,19 @@
 <button class="btn btn-secondary mb-3 mt-4" (click)="goBack()">Back</button>
 <div class="container mt-3">
     <p class="fs-5">Attendance Management Component</p>
-    <div class="card text-dark bg-light mb-3" *ngFor="let Attendance of Details" style="max-width: 18rem;">
+
+    <div class="input-group mb-4">
+        <input class="form-control" id="inputGroupSelect04" placeholder="Employee Name" [(ngModel)]="searchTerm">
+        <button class="btn btn-outline-secondary" type="button" (click)="searchAttendance()">Search</button>
+    </div>    
+
+    <div class="card text-dark bg-light mb-3" *ngFor="let Attendance of filteredDetails" style="max-width: 18rem;">
         <div class="card-header">{{Attendance.Name}}</div>
         <div class="card-body">
-          <h5 class="card-title">{{Attendance.Email}}</h5>
-          <p class="card-text">{{Attendance.Date}}</p>
-          <p class="card-text">{{Attendance.Time}}</p>
+            <h6 class="card-title">{{Attendance.Email}}</h6>
+            <p class="card-text">{{Attendance.Date}}</p>
+            <p class="card-text">{{Attendance.Time}}</p>
         </div>
-      </div>
+    </div>
 
 </div>
