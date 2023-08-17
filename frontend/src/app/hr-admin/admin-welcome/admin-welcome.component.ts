@@ -3,7 +3,7 @@ import { EmployeeManagementComponent } from '../employee-management/employee-man
 import { RecruitmentOnboardingComponent } from '../recruitment-onboarding/recruitment-onboarding.component';
 import { PayrollManagementComponent } from '../payroll-management/payroll-management.component';
 import { TrainingDevelopmentComponent } from '../training-development/training-development.component';
-
+import { AttendanceManagementComponent } from '../attendance-management/attendance-management.component';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { TrainingDevelopmentComponent } from '../training-development/training-d
   styleUrls: ['./admin-welcome.component.css']
 })
 export class AdminWelcomeComponent {
-  
+
   isMenuOpen: boolean = false;
   activeIndex: number = -1;
 
@@ -24,7 +24,7 @@ export class AdminWelcomeComponent {
     this.activeIndex = this.activeIndex === index ? -1 : index;
   }
 
-     // Define a property to keep track of the active component to display
+  // Define a property to keep track of the active component to display
   activeComponent: any = null;
 
   // Function to set the active component based on the selected list item
@@ -41,6 +41,9 @@ export class AdminWelcomeComponent {
         break;
       case 'Training Development':
         this.activeComponent = TrainingDevelopmentComponent;
+        break;
+      case 'Attendance':
+        this.activeComponent = AttendanceManagementComponent;
         break;
       default:
         break;
