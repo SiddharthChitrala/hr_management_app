@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <div class="container-fluid">
   <div class="row">
-    <div class="col">
+    <div class="col-md-3">
       <div class="navbar" [ngClass]="{'open': isMenuOpen}">
 
         <ul>
@@ -90,7 +90,7 @@
       </div>
     </div>
     <!-- Centered Image -->
-    <div class="col">
+    <div class="col-md-9">
       <!-- Use the router-outlet to display the routed content -->
       <ng-container *ngIf="activeComponent; else showImage">
         <!-- Display the active component -->

@@ -1,1 +1,13 @@
-<p>attendance-management works!</p>
+<button class="btn btn-secondary mb-3 mt-4" (click)="goBack()">Back</button>
+<div class="container mt-3">
+    <p class="fs-5">Attendance Management Component</p>
+    <div class="card text-dark bg-light mb-3" *ngFor="let Attendance of Details" style="max-width: 18rem;">
+        <div class="card-header">{{Attendance.Name}}</div>
+        <div class="card-body">
+          <h5 class="card-title">{{Attendance.Email}}</h5>
+          <p class="card-text">{{Attendance.Date}}</p>
+          <p class="card-text">{{Attendance.Time}}</p>
+        </div>
+      </div>
+
+</div>
