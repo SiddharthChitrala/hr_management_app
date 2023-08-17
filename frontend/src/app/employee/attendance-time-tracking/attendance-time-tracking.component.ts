@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AttendanceTimeTrackingComponent {
 
-
+  constructor(private http: HttpClient) {}
 
   Name: string="";
   Email: string="";
@@ -26,8 +26,18 @@ export class AttendanceTimeTrackingComponent {
       Name: this.Name,
       Email: this.Email,
       Date: this.Date,
-      Time: this.Time
+      Time: this.Time      
     };
+    console.log(formData);
+    this.http.post<any>('http://localhost:9000/create', formData).subscribe(
+      (response) => {
+        console.log('Attendance submitted successfull...', response.message);
+      },
+      (error) => {
+        console.error('Error submitting attendance..', error);
+      }
+    );
+   }
 
-  }
+   
 }
