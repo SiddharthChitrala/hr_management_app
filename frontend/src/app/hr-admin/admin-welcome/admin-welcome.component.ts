@@ -3,7 +3,6 @@ import { EmployeeManagementComponent } from '../employee-management/employee-man
 import { RecruitmentOnboardingComponent } from '../recruitment-onboarding/recruitment-onboarding.component';
 import { PayrollManagementComponent } from '../payroll-management/payroll-management.component';
 import { TrainingDevelopmentComponent } from '../training-development/training-development.component';
-import { AttendanceTimeTrackingComponent } from '../attendance-time-tracking/attendance-time-tracking.component';
 
 
 
@@ -42,9 +41,6 @@ export class AdminWelcomeComponent {
         break;
       case 'Training Development':
         this.activeComponent = TrainingDevelopmentComponent;
-        break;
-      case 'Attendance':
-        this.activeComponent = AttendanceTimeTrackingComponent;
         break;
       default:
         break;

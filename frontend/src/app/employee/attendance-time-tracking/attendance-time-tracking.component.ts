@@ -8,32 +8,26 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./attendance-time-tracking.component.css']
 })
 export class AttendanceTimeTrackingComponent {
-  attendanceForm: FormGroup;
+
+
+
+  Name: string="";
+  Email: string="";
+  Date: string="";
+  Time: string="";
+
+
   goBack() {
     window.location.reload();
-  }  
-  constructor(
-    private formBuilder: FormBuilder,
-    private http: HttpClient
-  ) {
-    this.attendanceForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      date: ['', Validators.required],
-      time: ['', Validators.required]
-    });
   }
 
-  submitAttendance() {
-    if (this.attendanceForm.valid) {
-      const attendanceData = this.attendanceForm.value;
-      
-      this.http.post('/api/attendance', attendanceData).subscribe(response => {
-        console.log('Attendance saved:', response);
-        this.attendanceForm.reset();
-      }, error => {
-        console.error('Error saving attendance:', error);
-      });
-    }
+  onSubmit() {
+    const formData = {
+      Name: this.Name,
+      Email: this.Email,
+      Date: this.Date,
+      Time: this.Time
+    };
+
   }
 }

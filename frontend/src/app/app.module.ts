@@ -2,14 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Import FormsModule and ReactiveFormsModule
 import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeManagementComponent } from './hr-admin/employee-management/employee-management.component';
 import { RecruitmentOnboardingComponent } from './hr-admin/recruitment-onboarding/recruitment-onboarding.component';
 import { PayrollManagementComponent } from './hr-admin/payroll-management/payroll-management.component';
 import { TrainingDevelopmentComponent } from './hr-admin/training-development/training-development.component';
-import { AttendanceTimeTrackingComponent } from './hr-admin/attendance-time-tracking/attendance-time-tracking.component';
 import { JobApplicationComponent } from './external-user/job-application/job-application.component';
 import { ApplicationStatusComponent } from './external-user/application-status/application-status.component';
 import { PayrollDetailsComponent } from './employee/payroll-details/payroll-details.component';
@@ -23,7 +21,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { EmployeeWelcomeComponent } from './employee/employee-welcome/employee-welcome.component';
 import { UserWelcomeComponent } from './external-user/user-welcome/user-welcome.component';
 import { SocketIoModule } from 'ngx-socket-io';
-import { RoomComponent } from './employee/room/room.component';
+import { RoomComponent } from './employee/room/room.component'; 
+import{ AttendanceTimeTrackingComponent } from './employee/attendance-time-tracking/attendance-time-tracking.component';
+import { AttendanceManagementComponent } from './hr-admin/attendance-management/attendance-management.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,9 @@ import { RoomComponent } from './employee/room/room.component';
     AdminWelcomeComponent,
     EmployeeWelcomeComponent,
     UserWelcomeComponent,
-    RoomComponent
+    RoomComponent,
+    AttendanceTimeTrackingComponent,
+    AttendanceManagementComponent
   ],
   imports: [
     BrowserModule,

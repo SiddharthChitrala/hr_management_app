@@ -7,7 +7,6 @@ import { EmployeeManagementComponent } from './hr-admin/employee-management/empl
 import { RecruitmentOnboardingComponent } from './hr-admin/recruitment-onboarding/recruitment-onboarding.component';
 import { PayrollManagementComponent } from './hr-admin/payroll-management/payroll-management.component';
 import { TrainingDevelopmentComponent } from './hr-admin/training-development/training-development.component';
-import { AttendanceTimeTrackingComponent } from './hr-admin/attendance-time-tracking/attendance-time-tracking.component';
 import { JobApplicationComponent } from './external-user/job-application/job-application.component';
 import { ApplicationStatusComponent } from './external-user/application-status/application-status.component';
 import { PayrollDetailsComponent } from './employee/payroll-details/payroll-details.component';
@@ -25,7 +24,6 @@ const routes: Routes = [
   { path: 'recruitment-onboarding', component: RecruitmentOnboardingComponent },
   { path: 'payroll-management', component: PayrollManagementComponent },
   { path: 'training-development', component: TrainingDevelopmentComponent },
-  { path: 'attendance-time-tracking', component: AttendanceTimeTrackingComponent },
   { path: 'job-application', component: JobApplicationComponent },
   { path: 'application-status', component: ApplicationStatusComponent },
   { path: 'payroll-details', component: PayrollDetailsComponent },
