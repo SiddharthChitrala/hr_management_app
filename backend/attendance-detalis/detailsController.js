@@ -1,6 +1,6 @@
 var useJobService = require('./detailsService');
 
-var getJobDataControllerFn = async (req, res) => {
+var getEmpJobDataControllerFn = async (req, res) => {
     try {
         var userJobDetails = await useJobService.getJobDataFromDBService();
         res.send({ "status": true, 'data': userJobDetails });
@@ -10,7 +10,7 @@ var getJobDataControllerFn = async (req, res) => {
     }
 };
 
-var createJobDataControllerFn = async (req, res) => {
+var createEmpJobDataControllerFn = async (req, res) => {
     try {
         var status = await useJobService.createJobDetailsDBService(req.body);
         if (status) {
@@ -24,7 +24,7 @@ var createJobDataControllerFn = async (req, res) => {
     }
 };
 
-var updateJobDataControllerFn = async (req, res) => {
+var updateEmpJobDataControllerFn = async (req, res) => {
     console.log(req.params.id);
     console.log(req.body);
     var result = await useJobService.updateJobDBService(req.params.id, req.body);
@@ -36,7 +36,7 @@ var updateJobDataControllerFn = async (req, res) => {
     }
 }
 
-var deleteJobDataControllerFn=async(req,res)=>{
+var deleteEmpJobDataControllerFn=async(req,res)=>{
     console.log(req.params.id);
    
     var result=await useJobService.deleteJobDBService(req.params.id);
@@ -51,8 +51,8 @@ var deleteJobDataControllerFn=async(req,res)=>{
 
 module.exports = {
 
-    getJobDataControllerFn,
-    createJobDataControllerFn,
-    updateJobDataControllerFn,
-    deleteJobDataControllerFn
+    getEmpJobDataControllerFn,
+    createEmpJobDataControllerFn,
+    updateEmpJobDataControllerFn,
+    deleteEmpJobDataControllerFn
 };

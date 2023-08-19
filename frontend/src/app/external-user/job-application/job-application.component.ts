@@ -44,6 +44,8 @@ export class JobApplicationComponent {
     this.http.post<any>('http://localhost:9000/create/job', formData).subscribe(
       (response) => {
         console.log('Application submitted successfully:', response.message);
+        alert("Applied Successfully")
+        window.location.reload();
       },
       (error) => {
         console.error('Error submitting application:', error);

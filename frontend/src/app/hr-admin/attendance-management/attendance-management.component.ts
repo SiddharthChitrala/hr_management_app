@@ -21,7 +21,7 @@ export class AttendanceManagementComponent {
   getAllDetails() {
     this.http.get("http://localhost:9000/get").subscribe((resultData: any) => {
       console.log(resultData);
-      this.filteredDetails = resultData.data;
+      this.Details = resultData.data;
     })
   }
   searchAttendance() {

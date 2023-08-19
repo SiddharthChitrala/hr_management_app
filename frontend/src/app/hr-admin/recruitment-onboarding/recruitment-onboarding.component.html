@@ -1,1 +1,28 @@
-<p>recruitment-onboarding works!</p>
+<div class="container mt-4">
+  <p class="fs-5">Users Job Application Details</p>
+
+  <div class="card-group">
+    <div class="card text-dark bg-warning" *ngFor="let JobData of Details">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="{{ JobData.resume }}" class="card-img" alt="Resume">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ JobData.full_name }}</h5>
+            <p class="card-text"><strong>Position:</strong> {{ JobData.position }}</p>
+            <p class="card-text"><strong>Email:</strong> {{ JobData.email }}</p>
+            <p class="card-text"><strong>Phone:</strong> {{ JobData.phone }}</p>
+            <p class="card-text"><strong>Address:</strong> {{ JobData.address }}</p>
+            <p class="card-text"><strong>Job Type:</strong> {{ JobData.job_type }}</p>
+            <p class="card-text"><strong>Education:</strong> {{ JobData.education }}</p>
+            <p class="card-text"><strong>Experience:</strong> {{ JobData.experience }}</p>
+            <p class="card-text"><strong>Cover Letter:</strong> {{ JobData.cover_letter }}</p>
+            <p class="card-text"><strong>Status:</strong> {{ JobData.status }}</p>
+            <a href="{{ JobData.resume }}" download="{{ JobData.full_name }}_Resume.pdf" class="btn btn-primary">Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

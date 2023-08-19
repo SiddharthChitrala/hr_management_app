@@ -22,9 +22,9 @@ router.post('/create/job', jobDataController.createJobDataControllerFn);
 router.patch('/update/job/:id',jobDataController.updateJobDataControllerFn);
 router.delete('/remove/job/:id',jobDataController.deleteJobDataControllerFn);
 
-router.get('/get', attendanceDetailsController.getJobDataControllerFn);
-router.post('/create', attendanceDetailsController.createJobDataControllerFn);
-router.patch('/update/:id',attendanceDetailsController.updateJobDataControllerFn);
-router.delete('/remove/:id',attendanceDetailsController.deleteJobDataControllerFn);
+router.get('/get', attendanceDetailsController.getEmpJobDataControllerFn);
+router.post('/create', attendanceDetailsController.createEmpJobDataControllerFn);
+router.patch('/update/:id',attendanceDetailsController.updateEmpJobDataControllerFn);
+router.delete('/remove/:id',attendanceDetailsController.deleteEmpJobDataControllerFn);
 
 module.exports = router;

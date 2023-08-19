@@ -9,8 +9,5 @@ import { Router } from '@angular/router';
 export class RequestMeetingsComponent {
   constructor(private router: Router) {}
 
-  createRoom() {
-    const timestamp = Date.now();
-    this.router.navigate(['/Room', timestamp.toString()]);
-  }
+
 }
