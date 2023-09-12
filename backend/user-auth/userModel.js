@@ -12,7 +12,7 @@ var userSchema = new Schema({
     },
     password: {
         type: String,
-        minlength: 6,
+        minlength: 2,
         maxlength: 1024,
         required: true
     }

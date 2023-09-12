@@ -19,7 +19,7 @@
             <p class="card-text"><strong>Experience:</strong> {{ JobData.experience }}</p>
             <p class="card-text"><strong>Cover Letter:</strong> {{ JobData.cover_letter }}</p>
             <p class="card-text"><strong>Status:</strong> {{ JobData.status }}</p>
-            <a href="{{ JobData.resume }}" download="{{ JobData.full_name }}_Resume.pdf" class="btn btn-primary">Download Resume</a>
+            <a (click)="downloadResume(JobData._id, JobData.resume)" class="btn btn-primary">Download Resume</a>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-// job-application.component.ts
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -14,7 +13,7 @@ export class JobApplicationComponent {
   address: string = '';
   position: string = '';
   job_type: string = '';
-  resume: any; // You might need to adjust the type based on your requirements
+  resume: File | null = null; // Use the File type for the resume
   education: string = '';
   experience: string = '';
   cover_letter: string = '';
@@ -26,25 +25,34 @@ export class JobApplicationComponent {
     window.location.reload();
   }  
 
-  submitForm() {
-    const formData = {
-      full_name: this.full_name,
-      email: this.email,
-      phone: this.phone,
-      address: this.address,
-      position: this.position,
-      job_type: this.job_type,
-      resume: this.resume,
-      education: this.education,
-      experience: this.experience,
-      cover_letter: this.cover_letter,
-      status: this.status
-    };
+  onFileSelected(event: any) {
+    this.resume = event.target.files[0];
+    console.log('Selected file:', this.resume);
+  }
   
+  
+
+  submitForm() {
+    const formData = new FormData();
+    formData.append('full_name', this.full_name);
+    formData.append('email', this.email);
+    formData.append('phone', this.phone);
+    formData.append('address', this.address);
+    formData.append('position', this.position);
+    formData.append('job_type', this.job_type);
+    if (this.resume) {
+      formData.append('resume', this.resume, this.resume.name);
+    }
+    
+    formData.append('education', this.education);
+    formData.append('experience', this.experience);
+    formData.append('cover_letter', this.cover_letter);
+    formData.append('status', this.status);
+
     this.http.post<any>('http://localhost:9000/create/job', formData).subscribe(
       (response) => {
         console.log('Application submitted successfully:', response.message);
-        alert("Applied Successfully")
+        alert("Applied Successfully");
         window.location.reload();
       },
       (error) => {

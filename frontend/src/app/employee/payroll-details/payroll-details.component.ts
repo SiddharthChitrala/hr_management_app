@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./payroll-details.component.css']
 })
 export class PayrollDetailsComponent {
+  formData: any = {}; // Create an object to store form data
 
+  goBack() {
+    window.location.reload();
+  }
+  onSubmit() {
+    console.log('Form Data:', this.formData);
+    this.formData = {};
+  }
 }

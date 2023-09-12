@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { EmployeeManagementComponent } from '../employee-management/employee-management.component';
 import { RecruitmentOnboardingComponent } from '../recruitment-onboarding/recruitment-onboarding.component';
 import { PayrollManagementComponent } from '../payroll-management/payroll-management.component';
-import { TrainingDevelopmentComponent } from '../training-development/training-development.component';
 import { AttendanceManagementComponent } from '../attendance-management/attendance-management.component';
 
 
@@ -38,9 +37,6 @@ export class AdminWelcomeComponent {
         break;
       case 'Payroll':
         this.activeComponent = PayrollManagementComponent;
-        break;
-      case 'Training Development':
-        this.activeComponent = TrainingDevelopmentComponent;
         break;
       case 'Attendance':
         this.activeComponent = AttendanceManagementComponent;

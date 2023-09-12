@@ -6,7 +6,6 @@ import { EmployeeAuthComponent } from './employee/employee-auth/employee-auth.co
 import { EmployeeManagementComponent } from './hr-admin/employee-management/employee-management.component';
 import { RecruitmentOnboardingComponent } from './hr-admin/recruitment-onboarding/recruitment-onboarding.component';
 import { PayrollManagementComponent } from './hr-admin/payroll-management/payroll-management.component';
-import { TrainingDevelopmentComponent } from './hr-admin/training-development/training-development.component';
 import { JobApplicationComponent } from './external-user/job-application/job-application.component';
 import { ApplicationStatusComponent } from './external-user/application-status/application-status.component';
 import { PayrollDetailsComponent } from './employee/payroll-details/payroll-details.component';
@@ -23,7 +22,6 @@ const routes: Routes = [
   { path: 'employee-management', component: EmployeeManagementComponent },
   { path: 'recruitment-onboarding', component: RecruitmentOnboardingComponent },
   { path: 'payroll-management', component: PayrollManagementComponent },
-  { path: 'training-development', component: TrainingDevelopmentComponent },
   { path: 'job-application', component: JobApplicationComponent },
   { path: 'application-status', component: ApplicationStatusComponent },
   { path: 'payroll-details', component: PayrollDetailsComponent },

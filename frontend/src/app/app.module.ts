@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { EmployeeManagementComponent } from './hr-admin/employee-management/employee-management.component';
 import { RecruitmentOnboardingComponent } from './hr-admin/recruitment-onboarding/recruitment-onboarding.component';
 import { PayrollManagementComponent } from './hr-admin/payroll-management/payroll-management.component';
-import { TrainingDevelopmentComponent } from './hr-admin/training-development/training-development.component';
 import { JobApplicationComponent } from './external-user/job-application/job-application.component';
 import { ApplicationStatusComponent } from './external-user/application-status/application-status.component';
 import { PayrollDetailsComponent } from './employee/payroll-details/payroll-details.component';
@@ -31,7 +30,6 @@ import { AttendanceManagementComponent } from './hr-admin/attendance-management/
     EmployeeManagementComponent,
     RecruitmentOnboardingComponent,
     PayrollManagementComponent,
-    TrainingDevelopmentComponent,
     AttendanceTimeTrackingComponent,
     JobApplicationComponent,
     ApplicationStatusComponent,

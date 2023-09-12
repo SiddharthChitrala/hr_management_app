@@ -16,13 +16,7 @@
    - Manage payroll processing and ensure timely payments.
    - Generate and distribute payslips to employees.
 
-
-4. **Training and Development:**
-   - Identify training needs and plan employee development programs.
-   - Approve training requests and track employee training progress.
-   - Manage training resources and course catalogs.
-
-5. **Attendance and Time Tracking:**
+4. **Attendance and Time Tracking:**
    - Monitor employee attendance and approve time-off requests.
    - Handle attendance records and manage leave balances.
    - Track employee working hours and overtime.
