@@ -1,4 +1,3 @@
-// payrollService.js
 const empPayrollModel = require('./payrollModel');
 
 function getPayrollDataFromDBService() {
