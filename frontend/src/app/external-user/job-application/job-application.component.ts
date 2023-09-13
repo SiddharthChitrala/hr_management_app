@@ -13,51 +13,59 @@ export class JobApplicationComponent {
   address: string = '';
   position: string = '';
   job_type: string = '';
-  resume: File | null = null; // Use the File type for the resume
   education: string = '';
   experience: string = '';
   cover_letter: string = '';
-  status: string = 'Pending';
+  status: string = 'Pending'; // You can set a default value if needed
+  selectedFile: File | null = null;
 
-  constructor(private http: HttpClient) {}
+  // Add a property to store the uploaded resume ID
+  uploadedResumeId: string | null = null;
 
-  goBack() {
-    window.location.reload();
-  }  
+  constructor(private http: HttpClient) { }
 
   onFileSelected(event: any) {
-    this.resume = event.target.files[0];
-    console.log('Selected file:', this.resume);
+    this.selectedFile = event.target.files[0];
   }
-  
-  
 
-  submitForm() {
+  uploadResume() {
+    console.log('Uploading resume...');
+    if (!this.selectedFile) return;
+
     const formData = new FormData();
+    formData.append('resume', this.selectedFile);
     formData.append('full_name', this.full_name);
     formData.append('email', this.email);
-    formData.append('phone', this.phone);
-    formData.append('address', this.address);
-    formData.append('position', this.position);
-    formData.append('job_type', this.job_type);
-    if (this.resume) {
-      formData.append('resume', this.resume, this.resume.name);
-    }
-    
-    formData.append('education', this.education);
-    formData.append('experience', this.experience);
-    formData.append('cover_letter', this.cover_letter);
-    formData.append('status', this.status);
+    // ... (other form fields)
 
-    this.http.post<any>('http://localhost:9000/create/job', formData).subscribe(
-      (response) => {
-        console.log('Application submitted successfully:', response.message);
-        alert("Applied Successfully");
-        window.location.reload();
+    this.http.post('http://localhost:9000/upload', formData).subscribe(
+      (response: any) => {
+        console.log('Response from server:', response)
+        this.selectedFile = null;
+        alert('Resume uploaded successfully');
+        this.resetForm();
       },
       (error) => {
-        console.error('Error submitting application:', error);
+        console.error('Error uploading resume', error);
       }
     );
+  }
+
+  goBack() {
+    location.reload();
+  }
+  // Add a method to reset the form
+  resetForm() {
+    this.full_name = '';
+    this.email = '';
+    this.phone = '';
+    this.address = '';
+    this.position = '';
+    this.job_type = '';
+    this.education = '';
+    this.experience = '';
+    this.selectedFile = null; 
+    this.cover_letter = '';
+    this.status = 'Pending';
   }
 }

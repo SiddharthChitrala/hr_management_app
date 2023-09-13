@@ -6,7 +6,6 @@ const userController = require('../user-auth/userController');
 const hrController = require('../hr-admin-Auth/hrController');
 const jobDataController = require('../job_cources_application/jobController');
 const attendanceDetailsController = require('../attendance-detalis/detailsController');
-const payrollDetailsController = require('../payroll-details/payrollController');
 
 // Authentication Routes
 router.post('/emp/login', empController.loginEmpControllerFn);
@@ -27,11 +26,5 @@ router.get('/attendance', attendanceDetailsController.getEmpJobDataControllerFn)
 router.post('/attendance', attendanceDetailsController.createEmpJobDataControllerFn);
 router.patch('/attendance/:id', attendanceDetailsController.updateEmpJobDataControllerFn);
 router.delete('/attendance/:id', attendanceDetailsController.deleteEmpJobDataControllerFn);
-
-// Payroll Details Routes
-router.get('/payroll', payrollDetailsController.getEmpPayrollDataControllerFn);
-router.post('/payroll', payrollDetailsController.createEmpPayrollDataControllerFn);
-router.patch('/payroll/:id', payrollDetailsController.updateEmpPayrollDataControllerFn);
-router.delete('/payroll/:id', payrollDetailsController.deleteEmpPayrollDataControllerFn);
 
 module.exports = router;

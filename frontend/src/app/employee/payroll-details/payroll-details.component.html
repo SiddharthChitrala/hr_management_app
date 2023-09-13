@@ -1,39 +1,41 @@
 <div class="container">
-    <button class="btn btn-secondary mt-3" (click)="goBack()">Back</button>
-    <p class="fs-2 fw-bold mt-4">Payroll Details</p>
+  <button class="btn btn-secondary mt-3" (click)="goBack()">Back</button>
+  <p class="fs-2 fw-bold mt-4">Payroll Details</p>
 
-    <p class="fs-4">Add Your Bank Details Here <button class="btn btn-primary"
-            style="--bs-btn-padding-y: .20rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .70rem;" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapseBankDetails" aria-expanded="false"
-            aria-controls="collapseBankDetails">
-            click me
-        </button></p>
-    <p>
+  <p class="fs-4">Add Your Bank Details Here
+    <button class="btn btn-primary"
+      style="--bs-btn-padding-y: .20rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .70rem;" type="button"
+      data-bs-toggle="collapse" data-bs-target="#collapseBankDetails" aria-expanded="false"
+      aria-controls="collapseBankDetails">
+      click me
+    </button>
+  </p>
 
-    </p>
-
-    <div class="collapse" id="collapseBankDetails">
-        <form (ngSubmit)="onSubmit()">
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" placeholder="Bank Name" id="bankName" [(ngModel)]="formData.bankName" name="bankName" required>
-              <label for="bankName">Bank Name</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" placeholder="Account Number" id="accountNumber" [(ngModel)]="formData.accountNumber" name="accountNumber" required>
-              <label for="accountNumber">Account Number</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" placeholder="CVV" id="cvv" [(ngModel)]="formData.cvv" name="cvv" required>
-              <label for="cvv">CVV</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" placeholder="Expiration Date" id="expirationDate" [(ngModel)]="formData.expirationDate" name="expirationDate" required>
-              <label for="expirationDate">Expiration Date</label>
-            </div>
-            <div class="col-12">
-              <button class="btn btn-primary" type="submit">Submit</button>
-            </div>
-          </form>         
-    </div>
-
+  <div class="collapse" id="collapseBankDetails">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" placeholder="Bank Name" id="bankName"
+          [(ngModel)]="bankName" name="bankName" required>
+        <label for="bankName">Bank Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" placeholder="Account Number" id="accountNumber"
+          [(ngModel)]="accountNumber" name="accountNumber" required>
+        <label for="accountNumber">Account Number</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" placeholder="CVV" id="cvv" [(ngModel)]="cvv" name="cvv"
+          required>
+        <label for="cvv">CVV</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" placeholder="Expiration Date" id="expirationDate"
+          [(ngModel)]="expirationDate" name="expirationDate" required>
+        <label for="expirationDate">Expiration Date</label>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
 </div>

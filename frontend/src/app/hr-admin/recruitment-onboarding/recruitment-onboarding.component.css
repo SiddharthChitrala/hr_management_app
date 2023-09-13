@@ -1,0 +1,8 @@
+.card-group {
+    margin: 20px 0; /* Add margin to the card group to create a gap between rows */
+  }
+
+  .card {
+    margin-right: 10px; /* Add margin to the right of each card for horizontal gap */
+    margin-bottom: 20px; /* Add margin to the bottom of each card for vertical gap */
+  }

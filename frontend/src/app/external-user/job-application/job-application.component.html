@@ -1,7 +1,7 @@
 <div class="container mt-5">
     <button class="btn btn-secondary mb-3" (click)="goBack()">Back</button>
     <h1 class="mb-4">Job Application Form</h1>
-    <form (ngSubmit)="submitForm()">
+    <form>
         <!-- Personal Information -->
         <div class="mb-3">
             <label for="full_name" class="form-label">Full Name:</label>
@@ -41,31 +41,34 @@
 
         <div class="mb-3">
             <label for="resume" class="form-label">Upload Resume:</label>
-            <input type="file" class="form-control" id="resume" name="resume" (change)="onFileSelected($event)">
+            <input type="file" class="form-control" id="resumeFile" (change)="onFileSelected($event)">
         </div>
 
         <!-- Education -->
         <div class="mb-3">
             <label for="education" class="form-label">Education:</label>
-            <textarea class="form-control" id="education" rows="4" cols="50" name="education" [(ngModel)]="education"></textarea>
+            <textarea class="form-control" id="education" rows="4" cols="50" name="education"
+                [(ngModel)]="education"></textarea>
         </div>
 
         <!-- Work Experience -->
         <div class="mb-3">
             <label for="experience" class="form-label">Work Experience:</label>
-            <textarea class="form-control" id="experience" rows="4" cols="50" name="experience" [(ngModel)]="experience"></textarea>
+            <textarea class="form-control" id="experience" rows="4" cols="50" name="experience"
+                [(ngModel)]="experience"></textarea>
         </div>
 
         <!-- Cover Letter -->
         <div class="mb-3">
             <label for="cover_letter" class="form-label">Cover Letter:</label>
-            <textarea class="form-control" id="cover_letter" rows="4" cols="50" name="cover_letter" [(ngModel)]="cover_letter"></textarea>
+            <textarea class="form-control" id="cover_letter" rows="4" cols="50" name="cover_letter"
+                [(ngModel)]="cover_letter"></textarea>
         </div>
 
         <!-- Default Status -->
         <input type="hidden" id="status" name="status" [(ngModel)]="status" value="Pending">
 
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" (click)="uploadResume()" class="btn btn-primary">Submit</button>
     </form>
 </div>

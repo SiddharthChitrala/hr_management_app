@@ -1,13 +1,18 @@
 <button class="btn btn-secondary mb-3 mt-4" (click)="goBack()">Back</button>
-<p class="fs-2">Your Job Status</p>
+<div class="container mt-3">
+  <h2 class="fs-2">Your Job Status</h2>
 
-<div class="container">
-    <div class="card text-white bg-primary mb-3" *ngFor="let UserItem of JobDetails"  style="max-width: 18rem;">
-        <div class="card-header">{{UserItem.position}}</div>
-        <div class="card-body">
-          <h5 class="card-title">{{UserItem.full_name}}</h5>
-          <p class="card-text">{{UserItem.job_type}} Job</p>
-          <p class="card-text">{{UserItem.status}}</p>
-        </div>
-      </div>
+  <div class="input-group mb-4">
+    <input class="form-control" id="inputGroupSelect04" placeholder="Full Name" [(ngModel)]="searchTerm">
+    <button class="btn btn-outline-secondary" type="button" (click)="filterResumes()">Search</button>
+  </div>
+  
+
+  <div class="card text-dark bg-light mb-3" *ngFor="let resume of resumes" style="max-width: 18rem;">
+    <div class="card-body">
+      <p class="card-text"><strong>Name:</strong> {{ resume.full_name }}</p>
+      <p class="card-text"><strong>Email:</strong> {{ resume.email }}</p>
+      <p class="card-text"><strong>Status:</strong> {{ resume.status }}</p>
+    </div>
+  </div>
 </div>
