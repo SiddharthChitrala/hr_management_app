@@ -1,1 +1,33 @@
-<p>payroll-management works!</p>
+<div class="container">
+    <div class="text-center">
+        <p class="fs-2">Payroll Details</p>
+    </div>
+
+    <div class="input-group mb-4">
+        <input class="form-control" id="inputGroupSelect04" placeholder="Employee Name" [(ngModel)]="searchTerm">
+        <button class="btn btn-primary" type="button" (click)="searchDetails()">Search</button>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 mb-4" *ngFor="let payroll of filteredDetails">
+            <div class="card h-100">
+                <div class="card-header">
+                    {{ payroll.fullName }}
+                </div>
+                <div class="card-body">
+                    <h6 class="card-title">{{ payroll.bankName }}</h6>
+                    <h6 class="card-text">{{ payroll.accountNumber}}</h6>
+                    <h6 class="card-text">{{ payroll.cvv}}</h6>
+                    <h6 class="card-text">{{ payroll.expirationDate}}</h6>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button class="btn btn-danger btn-block" (click)="deleteDetails(payroll._id)">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

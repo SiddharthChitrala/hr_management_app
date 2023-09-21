@@ -14,6 +14,11 @@
   <div class="collapse" id="collapseBankDetails">
     <form (ngSubmit)="onSubmit()">
       <div class="form-floating mb-3">
+        <input type="text" class="form-control" placeholder="Full Name" id="fullName"
+          [(ngModel)]="fullName" name="fullName" required>
+        <label for="fullName">Full Name</label>
+      </div>
+      <div class="form-floating mb-3">
         <input type="text" class="form-control" placeholder="Bank Name" id="bankName"
           [(ngModel)]="bankName" name="bankName" required>
         <label for="bankName">Bank Name</label>

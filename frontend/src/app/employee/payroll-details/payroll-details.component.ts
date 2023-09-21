@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PayrollDetailsComponent {
 
+  fullName:string='';
   bankName: string = '';
   accountNumber: string = '';
   cvv: string = '';
@@ -22,6 +23,7 @@ export class PayrollDetailsComponent {
   onSubmit() {
     // Create an object with the form data
     const formData = {
+      fullName:this.fullName,
       bankName: this.bankName,
       accountNumber: this.accountNumber,
       cvv: this.cvv,
@@ -34,6 +36,8 @@ export class PayrollDetailsComponent {
         (response) => {
           // Handle the success response from the server if needed
           console.log('Data posted successfully', response);
+          alert('Data Posted succesfully')
+          window.location.reload();
         },
         (error) => {
           // Handle any errors that occurred during the POST request
