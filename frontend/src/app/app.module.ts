@@ -22,6 +22,7 @@ import { SocketIoModule } from 'ngx-socket-io';
 import { RoomComponent } from './employee/room/room.component'; 
 import{ AttendanceTimeTrackingComponent } from './employee/attendance-time-tracking/attendance-time-tracking.component';
 import { AttendanceManagementComponent } from './hr-admin/attendance-management/attendance-management.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { AttendanceManagementComponent } from './hr-admin/attendance-management/
     HttpClientModule, // Include HttpClientModule for making HTTP requests
     AppRoutingModule,
     MatSnackBarModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

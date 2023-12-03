@@ -9,7 +9,6 @@ import { PayrollManagementComponent } from './hr-admin/payroll-management/payrol
 import { JobApplicationComponent } from './external-user/job-application/job-application.component';
 import { ApplicationStatusComponent } from './external-user/application-status/application-status.component';
 import { PayrollDetailsComponent } from './employee/payroll-details/payroll-details.component';
-import { RequestMeetingsComponent } from './employee/request-meetings/request-meetings.component';
 import { AdminWelcomeComponent } from './hr-admin/admin-welcome/admin-welcome.component';
 import { UserAuthComponent } from './external-user/user-auth/user-auth.component';
 import { UserWelcomeComponent } from './external-user/user-welcome/user-welcome.component';
@@ -25,14 +24,11 @@ const routes: Routes = [
   { path: 'job-application', component: JobApplicationComponent },
   { path: 'application-status', component: ApplicationStatusComponent },
   { path: 'payroll-details', component: PayrollDetailsComponent },
-  { path: 'request-meetings', component: RequestMeetingsComponent },
   { path: 'admin-welcome', component: AdminWelcomeComponent },
   { path: 'user-auth', component: UserAuthComponent },
   { path: 'user-welcome', component: UserWelcomeComponent },
   { path: 'employee-welcome', component: EmployeeWelcomeComponent },
-  // { path: 'employee-welcome/:roomId', component: EmployeeWelcomeComponent },
   { path: 'Room', component: RoomComponent },
-  { path: 'Room/:roomId', component: RoomComponent }
 
 
 ];

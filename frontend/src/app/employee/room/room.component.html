@@ -1,17 +1,17 @@
 <div class="container-fluid">
-    <form [formGroup]="conversationFormGroup" (ngSubmit)="getOrcreateConversation()">
-   
-        <label>Conversation Name</label>
-        <input type="text"  placeholder="abcd" formControlName="name">
+  <form [formGroup]="conversationFormGroup" (ngSubmit)="getOrcreateConversation()">
+
+    <label>Conversation Name</label>
+    <input type="text" placeholder="abcd" formControlName="name">
     &nbsp;
-      <button class="btn btn-primary" type="submit" [disabled]="!conversationFormGroup.valid"
-        title="Get Or Create Conversation">GetOrCreateConversation</button>
-    </form>
-  
-    <div>
-      <div id="remote-container">
-      </div>
-      <div id="local-container">
-      </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!conversationFormGroup.valid"
+      title="Get Or Create Conversation">GetOrCreateConversation</button>
+  </form>
+
+  <div>
+    <div id="remote-container">
+    </div>
+    <div id="local-container">
     </div>
   </div>
+</div>
