@@ -10,7 +10,6 @@ import { PayrollManagementComponent } from './hr-admin/payroll-management/payrol
 import { JobApplicationComponent } from './external-user/job-application/job-application.component';
 import { ApplicationStatusComponent } from './external-user/application-status/application-status.component';
 import { PayrollDetailsComponent } from './employee/payroll-details/payroll-details.component';
-import { RequestMeetingsComponent } from './employee/request-meetings/request-meetings.component';
 import { AdminAuthComponent } from './hr-admin/admin-auth/admin-auth.component';
 import { EmployeeAuthComponent } from './employee/employee-auth/employee-auth.component';
 import { UserAuthComponent } from './external-user/user-auth/user-auth.component';
@@ -34,7 +33,6 @@ import { AttendanceManagementComponent } from './hr-admin/attendance-management/
     JobApplicationComponent,
     ApplicationStatusComponent,
     PayrollDetailsComponent,
-    RequestMeetingsComponent,
     AdminAuthComponent,
     EmployeeAuthComponent,
     UserAuthComponent,
@@ -53,9 +51,6 @@ import { AttendanceManagementComponent } from './hr-admin/attendance-management/
     HttpClientModule, // Include HttpClientModule for making HTTP requests
     AppRoutingModule,
     MatSnackBarModule,
-    SocketIoModule.forRoot({
-      url:"/"
-    })
   ],
   providers: [],
   bootstrap: [AppComponent]
