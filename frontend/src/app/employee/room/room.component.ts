@@ -19,6 +19,12 @@ export class RoomComponent implements OnInit {
       name: this.fb.control('', [Validators.required])
     });
   }
+
+  
+  goBack() {
+    window.location.reload();
+  }
+
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
