@@ -1,7 +1,6 @@
 import { Component, Type } from '@angular/core';
 import { AttendanceTimeTrackingComponent } from '../attendance-time-tracking/attendance-time-tracking.component';
 import { PayrollDetailsComponent } from '../payroll-details/payroll-details.component';
-import { RequestMeetingsComponent } from '../request-meetings/request-meetings.component';
 import { RoomComponent } from '../room/room.component';
 
 @Component({
@@ -33,9 +32,6 @@ export class EmployeeWelcomeComponent {
         break;
       case 'Payment Details':
         this.activeComponent = PayrollDetailsComponent;
-        break;
-      case 'Request Meetings':
-        this.activeComponent = RequestMeetingsComponent;
         break;
       case 'Room':
         this.activeComponent = RoomComponent;
