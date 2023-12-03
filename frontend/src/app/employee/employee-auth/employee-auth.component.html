@@ -4,9 +4,9 @@
                <div class="col">
                     <div class="glassmorphism-form p-4 rounded">
                          <!-- Login Form -->
-                         <h2 class="text-center mb-0">Employee</h2>
+                         <h2 class="text-center mb-0 text-dark">Employee</h2>
                          <form *ngIf="!showSignupForm" (ngSubmit)="login()">
-                              <h2 class="text-center mb-3">Login</h2>
+                              <h2 class="text-center mb-3 text-dark">Login</h2>
                               <div class="mb-3">
                                    <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="email">
                               </div>
@@ -14,14 +14,14 @@
                                    <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password">
                               </div>
                               <button type="button" class="btn btn-primary" (click)="login()">Login</button>
-                              <p class="p-1">Register if you're not an Employee Admin
+                              <p class="p-1 text-dark">Register if you're not an Employee Admin
                                    <button type="button" class="btn btn-link" (click)="toggleForm()">Register</button>
                               </p>
                          </form>
 
                          <!-- Signup Form -->
                          <form *ngIf="showSignupForm" (ngSubmit)="signup()">
-                              <h2 class="text-center mb-3">Sign-Up</h2>
+                              <h2 class="text-center mb-3 text-dark">Sign-Up</h2>
                               <div class="mb-3">
                                    <input type="text" class="form-control" placeholder="Username" name="username"
                                         [(ngModel)]="username">
@@ -35,7 +35,7 @@
                                         [(ngModel)]="password">
                               </div>
                               <button type="submit" class="btn btn-primary">Signup</button>
-                              <p class="p-1">Login if you're an Employee Admin
+                              <p class="p-1 text-dark">Login if you're an Employee Admin
                                    <button type="button" class="btn btn-link" (click)="toggleForm()">Login</button>
                               </p>
                          </form>

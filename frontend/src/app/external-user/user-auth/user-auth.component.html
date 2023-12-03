@@ -5,7 +5,7 @@
                     <div class="glassmorphism-form p-4 rounded">
                          <!-- Login Form -->
                          <form *ngIf="!showSignupForm" (ngSubmit)="login()">
-                              <h2 class="text-center mb-4">User Login</h2>
+                              <h2 class="text-center mb-4 text-dark">User Login</h2>
                               <!-- Add your login form fields here -->
                               <div class="mb-3">
                                    <input type="email" class="form-control" placeholder="email" [(ngModel)]="email"
@@ -16,13 +16,13 @@
                                         [(ngModel)]="password" name="password">
                               </div>
                               <button type="submit" class="btn btn-primary">Login</button>
-                              <p class="p-1">Register if you're not an User
+                              <p class="p-1 text-dark">Register if you're not an User
                                    <button type="button" class="btn btn-link" (click)="toggleForm()">Register</button>
                               </p>
                          </form>
                          <!-- Signup Form -->
                          <form *ngIf="showSignupForm" (ngSubmit)="signup()">
-                              <h2 class="text-center mb-4">User Sign-Up</h2>
+                              <h2 class="text-center mb-4 text-dark">User Sign-Up</h2>
                               <div class="mb-3">
                                    <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username"
                                     name="username"  >
@@ -36,7 +36,7 @@
                                         [(ngModel)]="password" name="password">
                               </div>
                               <button type="submit" class="btn btn-primary">Signup</button>
-                              <p class="p-1">Login if you're an User
+                              <p class="p-1 text-dark">Login if you're an User
                                    <button type="button" class="btn btn-link" (click)="toggleForm()">Login</button>
                               </p>
                          </form>
